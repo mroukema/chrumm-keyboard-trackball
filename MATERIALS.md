@@ -14,8 +14,8 @@ Mechanical
 -  2x Artificial leather, ~195x130mm, max 1.2mm thickness
 - Glue for artificial leather on printed filament
 - Keycaps (64 mx + 6 choc v1)
-- 8 8x3mm Neodymium magnets (optional for magnetic base plate)
-- 3x Veichu bearings
+- 8x 8x3mm Neodymium magnets (optional for magnetic base plate)
+- 3x Veichu YK310/311 BTU bearings
 - 1x 34mm Trackball
 (*) Some of the screws are difficult to reach and
 require a ball-point driver, or a short-armed key.
@@ -45,6 +45,6 @@ Electronic
 -  2x Floor half (left, right)
 -  2x Palm rest (left, right)
 -  1x MCU Mounting Plate
--  1x Trackball Veichu bearing base
+-  1x Trackball Veichu BTU Bearing Base
 -  1x Trackball Top Ring
 
