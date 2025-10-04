@@ -1,15 +1,11 @@
-Chrumm keyboard
+Chrumm Trackball Keyboard
 ===============
 
-Chrumm is an open-hardware ergonomic keyboard,
-made of a 3D-printable body, a bendable PCB,
-and custom firmware for the Raspberry Pi Pico.
+Chrumm Trackball is a fork of the original [Chrumm open-hardware ergonomic keyboard](https://github.com/sevmeyer/chrumm-keyboard).
 
-This repository contains all relevant source files.
-I share these files in the hope that they are useful, or
-at least interesting to others. Keep in mind that this is
-a free, do-it-yourself project. What you see is what you get.
-Make sure to check the license.
+This fork adds more aggressive key stagger as per my own personal preference, a second row of choc thumb keys and a trackball + mouse buttons. The encoder has been dropped. The changes made make this version incompatible with the old PCB and is now handwired with per key PCBs + a Elite-pi microcontroller. The microcontroller has been moved to the case edge so that the usb-c port is outwardly accessible removing the need for a usb-c male-female adapter cable. Finally a outwardly accessible run button has been added for convinence
+
+I've included the python changes made to generate the second row of thumb keys but please note that there are plenty of manual editing of 3d objects post generation in order to convert the keys to choc compatible mounts, add the trackball and mouse keys and chnage the MCU mount. 
 
 ![Front view of the finished keyboard](images/front.jpg)
 
@@ -22,7 +18,6 @@ Files
 - [Releases] - Download page for STL, 3MF, GBR, UF2 files
 - [BUILD.md](BUILD.md) - Build advice
 - [MATERIALS.md](MATERIALS.md) - Bill Of Materials
-- [pcb/README.md](pcb/README.md) - PCB production details
 - [body/README.md](body/README.md) - Body generator parameters
 - [firmware/README.md](firmware/README.md) - Firmware overview and installation
 
@@ -32,25 +27,16 @@ Files
 Features
 --------
 
-Chrumm features a column staggered layout with simple thumb clusters.
-The right side has an additional column, to better approximate
-the standard ANSI layout, and to provide dedicated arrow keys.
-A central encoder allows for rotational input.
+Chrumm features a column staggered layout with two row thumb clusters.
+The left side has an additional column, to provide dedicated arrow keys.
 
 The body is a robust monoblock without visible screws. It has
 integrated split, tent, and tilt angles, similar to commercial
-ergonomic boards. The palm rests and the USB cable are firmly
+ergonomic boards. The palm rests are firmly
 attached, so that everything can be moved around without hassle.
 
-The STL files are generated programmatically, with a pure
-Python package that has no dependencies. They are optimized
-for FFF 3D printing. Most parts are printed sideways, to
-produce a smooth surface without the need of post-processing.
-Custom supports minimize the print time and filament cost.
-
-The body houses two reversible, bendable, interconnected PCBs.
-They are powered by a Raspberry Pi Pico.
-
+The starting point STL files are generated programmatically, with a pure
+Python package that has no dependencies. This fork has heavily modified the STLs post generation however.
 
 Layout
 ------
@@ -61,40 +47,12 @@ Layout
 Credit
 ------
 
-Chrumm would not exist without the shared knowledge of the
-mechanical keyboard community.
+This keyboard is a fork of the original [Chrumm open-hardware ergonomic keyboard](https://github.com/sevmeyer/chrumm-keyboard) without which this board would not exist.
 
-I found inspiration on [Reddit], [KBD.news], [geekhack], and
-learned a lot from the [PCB guides] by ai03 and Ruiqi Mao, the
-[Keyboard posts] by Masterzen, and the [Matrix Help] by Dave Dribin.
-
-The layout and body is influenced by projects like the [Ergodox],
-[Dactyl], [Sofle], [Pteron], and everything from [Bastardkb].
-I also used established open hardware repositories for reference,
-including the [UHK60], [Skeletyl], [Sofle], [Corne], and [Torn].
-
-[Reddit]: https://old.reddit.com/r/ErgoMechKeyboards+MechanicalKeyboards/
-[KBD.news]: https://kbd.news/
-[geekhack]: https://geekhack.org
-[PCB guides]: https://wiki.ai03.com/books/pcb-design
-[Keyboard posts]: https://www.masterzen.fr/tag/#mechanical-keyboards
-[Matrix Help]: https://www.dribin.org/dave/keyboard/one_html/
-[Ergodox]: https://www.ergodox.io/
-[Dactyl]: https://github.com/adereth/dactyl-keyboard
-[Sofle]: https://github.com/josefadamcik/SofleKeyboard
-[Pteron]: https://github.com/FSund/pteron-keyboard
-[Bastardkb]: https://bastardkb.com/
-[UHK60]: https://github.com/UltimateHackingKeyboard/uhk60v1-electronics
-[Skeletyl]: https://github.com/Bastardkb/Skeletyl-PCB-plate
-[Corne]: https://github.com/foostan/crkbd
-[Torn]: https://github.com/rtitmuss/torn
-
+Trackball mount is modified starting from the [Charybdis veichu mod](https://github.com/Bastardkb/Charybdis/tree/main/files/mods/veichu) and [adapter ring](https://github.com/Bastardkb/Charybdis/blob/main/files/3x5%20nano/adapter_v2_top_v75.stl)
 
 Gallery
 -------
 
 ![Print and assembly of the body](images/body.jpg)
 
-![Palm rests wrapped with artificial leather](images/palms.jpg)
-
-![Preparation and installation of the PCB](images/pcb.jpg)
