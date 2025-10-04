@@ -70,19 +70,31 @@ class Layout:
         # Thumbs
 
         def initThumb(target, side, index, sign):
-            units = thumbUnits[index][::sign]
-            angles = thumbAngles[index][::sign]
-            offset = thumbOffsets[index]
+            print(side)
+            row = 0
+            while row < len(thumbUnits):
+                print("Row: " + str(row))
+                units = thumbUnits[index][row][::sign]
+                angles = thumbAngles[index][row][::sign]
+                offset = thumbOffsets[index][row]
 
-            startPos = self.alnumCol(-1, side)[-1].capPivotR
-            pivotPos = startPos - Vector(offset[0], rowPitch + offset[1])
+                print("alnumCol: " + side + " : " + str(self.alnumCol(0, side)[-1].capPivotR))
+                # print(self.alnumCol(-1, side))
+                startPos = self.alnumCol(-1 - row, side)[-1].capPivotR
+                print("startPos: " + str(startPos))
+                pivotPos = startPos - Vector(offset[0], (row  + 1) * rowPitch + offset[1], offset[2])
 
-            for unit, angle in zip(units, angles):
-                key = factory.make(unit)
-                key.transform(Matrix().rotatedZ(math.radians(angle)))
-                key.translate(pivotPos - key.capPivotR)
-                target.insert(0, key)
-                pivotPos = key.capPivotL
+                for unit, angle in zip(units, angles):
+                    key = factory.make(unit)
+                    print("key.capPivotR at create: " + str(key.capPivotR))
+    
+                    key.transform(Matrix().rotatedZ(math.radians(angle)))
+                    key.translate(pivotPos - key.capPivotR)
+                    print("pivotPos: " + str(pivotPos))
+                    print("key.capPivotR: " + str(key.capPivotR))
+                    target.insert(0, key)
+                    pivotPos = key.capPivotL
+                row += 1
 
         initThumb(self._thumbL, "left", 0, 1)
         initThumb(self._thumbR, "right", 1, -1)
