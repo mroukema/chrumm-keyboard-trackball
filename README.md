@@ -15,14 +15,9 @@ I've included the python changes made to generate the second row of thumb keys b
 Files
 -----
 
-- [Releases] - Download page for STL, 3MF, GBR, UF2 files
 - [BUILD.md](BUILD.md) - Build advice
 - [MATERIALS.md](MATERIALS.md) - Bill Of Materials
 - [body/README.md](body/README.md) - Body generator parameters
-- [firmware/README.md](firmware/README.md) - Firmware overview and installation
-
-[Releases]: https://github.com/sevmeyer/chrumm-keyboard/releases/
-
 
 Features
 --------
@@ -43,6 +38,9 @@ Layout
 
 ![Default logical layout with two layers](images/layout.svg)
 
+Firmware
+------
+Assoiciated firmware can be found on [my QMK fork](https://github.com/mroukema/qmk_firmware/tree/chrumm-trackball)
 
 Credit
 ------
