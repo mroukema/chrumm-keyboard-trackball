@@ -35,6 +35,7 @@ Electronic
 -  6x choc switch
 -  1x PMW3389 Trackball Sensor × 1 mount compatible with ([Good Great Grand Wonderful PCB](https://ergokeyboards.com/products/pmw3360-trackball-sensor-upgrade?srsltid=AfmBOoorIA-PvcSFLXnxYrQaHQz66xZLVIy85jk_gDgvaiQH9FwmXPHK))
 -  2x Omron D2F Mouse Switch
+-  1x Tactile Switch
 -  Electrial Wire
 
 
