@@ -7,9 +7,9 @@ This fork adds more aggressive key stagger as per my own personal preference, a 
 
 I've included the python changes made to generate the second row of thumb keys but please note that there are plenty of manual editing of 3d objects post generation in order to convert the keys to choc compatible mounts, add the trackball and mouse keys and chnage the MCU mount. 
 
-![Front view of the finished keyboard](images/front.jpg)
+![Front view of the finished keyboard](images/body_front.jpg)
 
-![Inside view with installed electronics](images/inside.jpg)
+![Inside view with installed electronics](images/circuitry.jpg)
 
 
 Files
@@ -52,5 +52,5 @@ Trackball mount is modified starting from the [Charybdis veichu mod](https://git
 Gallery
 -------
 
-![Print and assembly of the body](images/body.jpg)
-
+![Rear View](images/body_rear.jpg)
+![Bottom View](images/bottom_cover.jpg)
